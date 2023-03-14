@@ -1,0 +1,1 @@
+# here the server will save all the images
