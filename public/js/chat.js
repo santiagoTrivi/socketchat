@@ -54,8 +54,8 @@ const connectTosocket = async() => {
 
     socket.on('users-on', drawUsers);
 
-    socket.on('private-message', () => {
-
+    socket.on('private-message', (payload) => {
+        console.log(`private : ${payload}`);
     });
 
 }
@@ -86,8 +86,8 @@ const drawMessages = (chats = [] ) =>{
         chatsHTML += `
             <li>
                 <p>
-                    <h5 class="text-success">${name}</h5>
-                    <spam class="fs-6 text-muted">${message}</spam>
+                    <span class="text-primary">${name}: </span>
+                    <span">${message}</span>
                 </p>
             </li>
 
